@@ -41,6 +41,7 @@ body {
 
 #login{
 	margin : 200px auto;
+	height : 200px;
 }
 </style>
 <script type="text/javascript">
