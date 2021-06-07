@@ -235,6 +235,6 @@
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-        <script src="http://localhost/project3/common/js/scripts.js"></script>
+        <script src="http://localhost/sistProject3/common/js/scripts.js"></script>
     </body>
 </html>
