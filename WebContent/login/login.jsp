@@ -20,6 +20,8 @@ body {
    height:100%;
 } 
 
+
+
  /*    body {
         background: #f8f8f8;
         padding: 60px 0;
@@ -29,12 +31,13 @@ body {
         margin: 15px 0;
     }
   
-
  .container {
    min-height:100%;
    position:relative;
+  
   /*padding-bottom:100px;/* footer height */
 }
+
 
 #login{
 	margin : 200px auto;
@@ -53,13 +56,13 @@ body {
 <div class="container">
     <div id = "login" class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
         <div class="panel panel-success">
-            <div class="panel-heading">
-                <div class="panel-title">환영합니다!</div>
+            <div class="panel-heading" style ="text-align : center">
+                <div class="panel-title" >환영합니다!</div>
             </div>
             <div class="panel-body">
-                <form id="login-form">
+                <form id="login-form" method = "post">
                     <div>
-                        <input type="text" class="form-control" name="username" placeholder="Username" autofocus>
+                        <input type="text" class="form-control" name="id" placeholder="UserID" autofocus>
                     </div>
                     <div>
                         <input type="password" class="form-control" name="password" placeholder="Password">
@@ -75,7 +78,6 @@ body {
         </div>
     </div>
 </div>
-
 
 <%@ include file = "../footer.jsp" %>
 </body>
