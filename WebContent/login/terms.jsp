@@ -39,7 +39,7 @@ body {
 			}else if($("#chk2").is(":checked")!=true){
 				alert("두번째 약관에 동의해주세요");
 			}else{
-				alert("약관동의 성공");
+				location.href = "http://localhost/sistProject3/login/signUp.jsp";
 			}//end if~else if~ else
 			
 			
