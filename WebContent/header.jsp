@@ -6,7 +6,7 @@
             <div class="container px-4 px-lg-5"  style = "width : 100%">
                 <a class="navbar-brand" href="#!">Start Bootstrap</a>
                 <div  id="loginHeader" style = "width : 50%; text-align : right">
-                       <a href ="http://localhost/sistProject3/login/login.jsp">로그인</a>|<a href ="#">회원가입</a>
+                       <a href ="http://localhost/sistProject3/login/login.jsp">로그인</a> | <a href ="#">회원가입</a>
                 </div>
             </div>
         </nav>
