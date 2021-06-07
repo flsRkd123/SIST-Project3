@@ -13,15 +13,28 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/latest/js/bootstrap.min.js"></script>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet">
 <style>
-    body {
+ html,
+body {
+   margin:0;
+   padding:0;
+   height:100%;
+} 
+
+ /*    body {
         background: #f8f8f8;
         padding: 60px 0;
-    }
-    
+    } */
+  
     #login-form > div {
         margin: 15px 0;
     }
+  
 
+ .container {
+   min-height:100%;
+   position:relative;
+  /*padding-bottom:100px;/* footer height */
+}
 
 </style>
 <script type="text/javascript">
@@ -52,6 +65,9 @@
                         <button type="submit" class="form-control btn btn-primary">로그인</button>
                     </div>
                 </form>
+                <div style= "padding-left : 180px">
+                <a href = "#">아이디 | 비밀번호 찾기</a> &nbsp; <a href = "#">회원가입</a>
+                </div>
             </div>
         </div>
     </div>
