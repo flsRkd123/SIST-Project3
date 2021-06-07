@@ -36,6 +36,9 @@ body {
   /*padding-bottom:100px;/* footer height */
 }
 
+#login{
+	margin : 200px auto;
+}
 </style>
 <script type="text/javascript">
 
@@ -48,7 +51,7 @@ body {
        <%@ include file ="../header.jsp" %>
 
 <div class="container">
-    <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+    <div id = "login" class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
         <div class="panel panel-success">
             <div class="panel-heading">
                 <div class="panel-title">환영합니다!</div>
@@ -63,11 +66,11 @@ body {
                     </div>
                     <div>
                         <button type="submit" class="form-control btn btn-primary">로그인</button>
-                    </div>
+					</div>
                 </form>
-                <div style= "padding-left : 180px">
-                <a href = "#">아이디 | 비밀번호 찾기</a> &nbsp; <a href = "#">회원가입</a>
-                </div>
+					<div style="width : 100%;text-align:center;">
+						<a href="#">아이디 | 비밀번호 찾기</a> &nbsp; <a href="#">회원가입</a>
+					</div>
             </div>
         </div>
     </div>
