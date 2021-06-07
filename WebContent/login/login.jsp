@@ -73,7 +73,7 @@ body {
 					</div>
                 </form>
 					<div style="width : 100%;text-align:center;">
-						<a href="#">아이디 | 비밀번호 찾기</a><a href="#">회원가입</a>
+						<a href="#">아이디/비밀번호 찾기</a> | <a href="#">회원가입</a>
 					</div>
             </div>
         </div>
