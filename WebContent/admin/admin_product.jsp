@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>adminLocation</title>
+    <title>adminProduct</title>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/latest/js/bootstrap.min.js"></script>
@@ -55,31 +55,39 @@ html, body {
 	font-weight: 1000;
 }
 
-#admin-location-table-div {
+#admin-product-table-div {
 	width: 100%;
 	height:500px;
 }
 
-#location-table{
+#product-table{
 	border: 1px solid #333;	
 	width: 100%;
 }
-#location-table td{
+#product-table td{
 	text-align: center;
 	border: 1px solid #333;	
 	height:100px;
 }
 
-#location-no{
-	width:200px;
+#product-no{
+	width:150px;
 	background-color: #ECECED;
 }
-#location-main{
-	width:700px;
+#product-main{
+	width:500px;
 	background-color: #ECECED;
 }
-#location-check{
-	width:200px;
+#product-writer{
+	width:150px;
+	background-color: #ECECED;
+}
+#product-regdate{
+	width:150px;
+	background-color: #ECECED;
+}
+#product-detail{
+	width:100px;
 	background-color: #ECECED;
 }
 </style>
@@ -105,20 +113,24 @@ html, body {
 		</div>
 		
 		<div class="admin-main-title">
-		지역관리
+		상품관리
 		</div>
 		
-		<div class="admin-location-table-div">
-			<table id="location-table">
+		<div class="admin-product-table-div">
+			<table id="product-table">
 				<tr>
-					<td id="location-no">No</td>
-					<td id="location-main">관리지역</td>
-					<td id="location-check">On/Off</td>
+					<td id="product-no">No</td>
+					<td id="product-main">상품명</td>
+					<td id="product-writer">등록자</td>
+					<td id="product-regdate">등록일자</td>
+					<td id="product-detail">상세보기</td>
 				</tr>
 				<tr>
 					<td></td>
 					<td ></td>
-					<td ><input type="checkbox"/></td>
+					<td ></td>
+					<td ></td>
+					<td ><input type="button" value="상세보기"/></td>
 				</tr>	
 			</table>
 		</div>
@@ -129,11 +141,3 @@ html, body {
 <%@ include file = "../footer.jsp" %>
 </body>
 </html>
-
-
-
-
-
-
-
-
