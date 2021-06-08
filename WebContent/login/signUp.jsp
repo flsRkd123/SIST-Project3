@@ -42,8 +42,85 @@ td {
 }
  </style>
 <script type="text/javascript">
+$(function(){
+	
+	$("#joinBtn").click(function(){
+		chkNull();
+	});
+	
+	
+});//Ready
 
+function chkPass(){
+		if( $("#passChk").val() != $("#pass").val() ){
+			//alert("비밀번호 일치하지 않습니다. 다시 입력해 주세요.");
+			$("#test").css("color", "#FF0000");
+			$("#test").text("비밀번호가 일치하지 않습니다. 다시 입력해주세요.");
+			$("#passChk").focus();
+			return;
+		}else{
+			$("#test").css("color", "#329932");
+			$("#test").text("비밀번호가 일치합니다. 계속 진행해 주세요.");
+			
+		}
+	
+}
 
+function chkNull(){
+	if(  $("#id").val() == "" ){
+		alert("아이디를 입력해주세요");
+		$("#id").focus();
+		return;
+	}
+	if(  $("#pass").val() == "" ){
+		alert("비밀번호를 입력해주세요");
+		$("#pass").focus();
+		return;
+	}
+	if(  $("#passChk").val() == "" ){
+		alert("비밀번호 확인을 해주세요");
+		$("#passChk").focus();
+		return;
+	}
+	if(  $("#name").val() == "" ){
+		alert("이름을 입력해주세요");
+		$("#name").focus();
+		return;
+	}
+	if(  $("#phone").val() == "" ){
+		alert("연락처를 입력해주세요");
+		$("#phone").focus();
+		return;
+	}
+	if(  $("#emailId").val() == "" ){
+		alert("이메일을 입력해주세요");
+		$("#emailId").focus();
+		return;
+	}
+	if(  $("#addr1").val() == "" ){
+		alert("우편번호를 입력해주세요");
+		$("#addr1").focus();
+		return;
+	}
+	if(  $("#addr2").val() == "" ){
+		alert("주소를 입력해주세요");
+		$("#addr2").focus();
+		return;
+	}
+	if(  $("#addr3").val() == "" ){
+		alert("상세주소를 입력해주세요");
+		$("#addr3").focus();
+		return;
+	}
+	if(  $("#loc").val() == "" ){
+		alert("지역을 입력해주세요");
+		$("#loc").focus();
+		return;
+	}
+	
+	
+	alert("회원가입성공");
+}
 </script>
 </head>
 <body>
@@ -64,8 +141,11 @@ td {
 				<td><input type = "password" name = "pass" id = "pass" class ="inputBox"/></td>
 			</tr> 
 			<tr>
-				<td>비밀번호확인</td>
-				<td><input type = "password" name = "passChk" id = "passChk" class ="inputBox"/></td>
+				<td style = "height : 30px">비밀번호확인</td>
+				<td style = "oadding-top : 40px">
+				<input type = "password" name = "passChk" id = "passChk" class ="inputBox" onblur="chkPass()"/>
+				<div style = "height : 10px; font-size: 15px"><label id = "test"></label></div>
+				</td>
 			</tr> 
 			<tr>
 				<td>이름</td>
@@ -78,7 +158,7 @@ td {
 			<tr>
 				<td>이메일</td>
 				<td><input type = "text" name = "emailId" id = "emailId" class ="inputBox" style = "width : 120px;" /> @ 
-				<select name = "email" id = "email" class ="inputBox" style = "width : 120px;">
+				<select name = "email" id = "domain" class ="inputBox" style = "width : 120px;">
 					<option value = "naver.com">naver.com</option>
 					<option value = "daum.net">daum.net</option>
 					<option value = "google.com">google.com</option>
@@ -93,17 +173,21 @@ td {
 			</tr> 
 		
 			<tr>
-				<td>상세주소</td>
+				<td>주소</td>
 				<td><input type = "text" name = "addr2" id = "addr2" class ="inputBox" style = "width : 280px"/></td>
+			</tr> 
+			<tr>
+				<td>상세주소</td>
+				<td><input type = "text" name = "addr3" id = "addr3" class ="inputBox" style = "width : 280px"/></td>
 			</tr> 
 			<tr>
 				<td>주 거래지역</td>
 				<td>
-				<select name = "addr3" id = "addr3" class ="inputBox" style = "width : 185px">
-					<option >임시</option>
-					<option >임시</option>
-					<option >임시</option>
-					<option >임시</option>
+				<select name = "loc" id = "loc" class ="inputBox" style = "width : 185px">
+					<option  value="">---지역선택---</option>
+					<option value = "1" >임시</option>
+					<option value = "1">임시</option>
+					<option value = "1">임시</option>
 				</select>
 				</td>
 			</tr> 
@@ -111,7 +195,7 @@ td {
 		</table>
 		</form>
 		<div>
-			<input type = "button" value = "뒤로가기" class= "btn btn-danger" style = "height : 40px;"/>&nbsp; &nbsp;<input type = "button" value = "가입하기" class = " btn btn-primary" style = "height : 40px"/>
+			<input type = "button" value = "뒤로가기" class= "btn btn-danger" style = "height : 40px;"/>&nbsp; &nbsp;<input type = "button" value = "가입하기" id ="joinBtn" class = " btn btn-primary" style = "height : 40px"/>
 		</div>
 	</div>
 	

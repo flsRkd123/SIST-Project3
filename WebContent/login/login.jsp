@@ -45,8 +45,32 @@ body {
 }
 </style>
 <script type="text/javascript">
+$(function(){
+	
+	$("#loginBtn").click(function(){
+		
+		nullChk();
+		
+	});//click
+});//ready
 
-
+function nullChk(){
+		if(  $("#id").val() == "" ){
+			alert("아이디를 입력해주세요");
+			$("#id").focus();
+			return;
+		}
+		
+		if(  $("#pass").val() == "" ){
+			alert("비밀번호를 입력해주세요");
+			$("#pass").focus();
+			return;
+		}
+		
+		$("#loginBtn").submit();
+	
+	
+}
 </script>
 </head>
 <body>
@@ -61,15 +85,15 @@ body {
                 <div class="panel-title" >환영합니다!</div>
             </div>
             <div class="panel-body">
-                <form id="login-form" method = "post">
+                <form  action ="#" id="login-form" method = "post">
                     <div>
-                        <input type="text" class="form-control" name="id" placeholder="UserID" autofocus>
+                        <input type="text" class="form-control" id = "id" name="id" placeholder="UserID" autofocus="autofocus">
                     </div>
                     <div>
-                        <input type="password" class="form-control" name="password" placeholder="Password">
+                        <input type="password" id ="pass" class="form-control" name="pass" placeholder="Password">
                     </div>
                     <div>
-                        <button type="submit" class="form-control btn btn-primary">로그인</button>
+                        <input type="button" id = "loginBtn" class="form-control btn btn-primary" value = "로그인">
 					</div>
                 </form>
 					<div style="width : 100%;text-align:center;">
