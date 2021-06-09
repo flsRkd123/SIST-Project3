@@ -18,8 +18,17 @@ html, body {
 	height: 100%;
 }
 
+#wrap{
+	display:flex;
+	width:100%;
+	height:100%;
+	flex-direction:column;
+	justify-content: space-between;
+}
+
 .container {
-	min-height: 82%;
+	display:flex;
+	min-height: 62%;
 	position: relative;
 }
 
@@ -43,8 +52,9 @@ html, body {
 }
 
 #table td {
-	font-size: 50px;
+	font-size: 40px;
 	text-align: center;
+	border-bottom: 1px solid #333;
 }
 
 .admin-main-title {
@@ -97,7 +107,8 @@ html, body {
 </script>
 </head>
 <body>
- <%@ include file ="../header.jsp" %>
+<div id="wrap">
+ <%@ include file ="admin_header.jsp" %>
 <div class="container">
 
 	<div class="admin-wrap">
@@ -138,6 +149,7 @@ html, body {
 	</div>
 
 </div>
-<%@ include file = "../footer.jsp" %>
+<%@ include file = "admin_footer.jsp" %>
+</div>
 </body>
 </html>
