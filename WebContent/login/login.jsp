@@ -56,7 +56,7 @@ $(function(){
 
 function nullChk(){
 		if(  $("#id").val() == "" ){
-			alert("아이디를 입력해주세요");
+			alert("아이디를 입력해주세요")
 			$("#id").focus();
 			return;
 		}
@@ -82,7 +82,7 @@ function nullChk(){
     <div id = "login" class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2" >
         <div class="panel panel-success">
             <div class="panel-heading" >
-                <div class="panel-title" style = "text-align : center">환영합니다!</div>
+                <div class="panel-title" style = "text-align : center"><strong>환영합니다!</strong></div>
             </div>
             <div class="panel-body" >
                 <form  action ="#" id="login-form" method = "post">
