@@ -15,7 +15,7 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/latest/js/bootstrap.min.js"></script>
 
 <style type="text/css">
-	#wrap {width : 1200px;  margin : 30px auto      }
+	#wrap {width : 1200px;  margin : 70px auto      }
   	#title{font-size: 36px;}
 	#navibar{width: 100% ; font-size: 15px ; width: 90%; margin-left: 5% ; margin: 30px auto }
   	#subtitle{width: 24% ;text-align: center ; }
@@ -25,20 +25,23 @@
 	#data{padding: 14px 12px}
 </style>
 <script type="text/javascript">
-
+$(function () {
+	$("#compage_btn").click(function() {
+		window.location="#"
+	});//click
 </script>
 </head>
 <body>
 <div>
 	<%@ include file="../header.jsp" %>
 	<div id="wrap">
-	<div id="title"><strong>My page</strong> > 내 상점 </div>
+	<div id="title"><strong>My page</strong> > 내 댓글 관리</div>
 		<div id="navibar">
 		<ul class="navbar navbar-expand navbar-dark bg-dark" role="navigation">
-		<li role="presentation" id="subtitle" class="nav-link px-2 text-white"><a id="li_txt" class="navbar-brand" href ="#">내 상점</a></li>
-		<li role="presentation" id="subtitle" class="nav-link px-2 text-white"><a id="li_txt" class="navbar-brand"href ="#">정보수정</a></li>
-		<li role="presentation" id="subtitle" class="nav-link px-2 text-white"><a id="li_txt" class="navbar-brand"href ="#">비밀번호변경</a></li>
-		<li role="presentation" id="subtitle" class="nav-link px-2 text-white"><a id="li_txt" class="navbar-brand" href ="#">내 댓글 관리</a></li>
+		<li role="presentation" id="subtitle" class="nav-link px-2 text-white"><a id="li_txt" class="navbar-brand" href ="mypage_myshop.jsp">내 상점</a></li>
+		<li role="presentation" id="subtitle" class="nav-link px-2 text-white"><a id="li_txt" class="navbar-brand"href ="mypage_checkpass_infor.jsp">정보수정</a></li>
+		<li role="presentation" id="subtitle" class="nav-link px-2 text-white"><a id="li_txt" class="navbar-brand"href ="mypage_checkpass_changepass.jsp">비밀번호변경</a></li>
+		<li role="presentation" id="subtitle" class="nav-link px-2 text-white"><a id="li_txt" class="navbar-brand" href ="mypage_mycomment.jsp">내 댓글 관리</a></li>
 		</ul>
 		</div>
 	<div id= "table">
@@ -46,7 +49,7 @@
 		<thead>
 		<tr id="taHead">
 			<th style ="width:200px">No.</th>
-			<th style ="width:500px">title</th>
+			<th style ="width:500px">comment</th>
 			<th style ="width:200px" colspan="2">time</th>
 		</tr>
 		</thead>
@@ -55,8 +58,11 @@
 			<td  id="data">데이터</td>
 			<td id="data">데이터</td>
 			<td id="data">데이터</td>
-			<td style ="width:130px" ><input  type= "button"  class="btn btn-warning" value ="상세정보 "  
+			<td style ="width:130px" >
+			<div id="compage_btn">
+			<input  type= "button"  class="btn btn-warning" value ="원문 보기 "  
 			 style ="background-color: #FFC107;font:12px/15px 굴림, Gulim, sans-serif; " /></td>
+			 </div>
 		</tr>
 		</tbody>
 	</table>
