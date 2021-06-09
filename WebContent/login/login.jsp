@@ -18,25 +18,42 @@ body {
    margin:0;
    padding:0;
    height:100%;
-} 
+}  
+#wrap {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+      }
 
-
+/* #footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+        min-width: 950px;
+        min-height: 140px;
+      } */
 
  /*    body {
         background: #f8f8f8;
         padding: 60px 0;
     } */
-  
+
     #login-form > div {
         margin: 15px 0;
     }
   
  .container {
-   min-height:61%;
+  display: flex;
+   min-height:62%;
    position:relative;
-  
+   justify-content: space-between;
+   
   /*padding-bottom:100px;/* footer height */
 }
+
 
 
 #login{
@@ -56,7 +73,7 @@ $(function(){
 
 function nullChk(){
 		if(  $("#id").val() == "" ){
-			alert("아이디를 입력해주세요")
+			alert("아이디를 입력해주세요");
 			$("#id").focus();
 			return;
 		}
@@ -74,6 +91,7 @@ function nullChk(){
 </script>
 </head>
 <body>
+<div id ="wrap">
 
   <!-- Navigation-->
        <%@ include file ="../header.jsp" %>
@@ -105,5 +123,6 @@ function nullChk(){
 </div>
 
 <%@ include file = "../footer.jsp" %>
+</div>
 </body>
 </html>
