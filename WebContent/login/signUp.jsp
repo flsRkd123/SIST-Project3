@@ -53,6 +53,8 @@ $(function(){
 		//window.open("id_dup.do?cmd=D001", "popup", "width=500, height=302, top="
 		window.open("http://localhost/sistProject3/login/id_dup.jsp", "popup", "width=500, height=302, top="
 			+ (window.screenTop + 300) + ",left=" + (window.screenLeft + 700))
+			
+			
 	})
 });//Ready
 
@@ -108,13 +110,20 @@ function chkNull(){
 		return;
 	}
 	if(  $("#phone").val().indexOf("-") != -1){
-		alert("전화번호는 '-'를 빼고 입력해주세요");
+		alert("연락처는 '-'를 빼고 입력해주세요");
 		$("#phone").focus();
 		$("#phone").val("");
 		return;
 		
-		
 	}
+	if(  $("#phone").val().length > 13 ){
+		alert("연락처를 다시 입력해주세요");
+		$("#phone").val("");
+		$("#phone").focus();
+		return;
+	}
+	
+	
 	if(  $("#emailId").val() == "" ){
 		alert("이메일을 입력해주세요");
 		$("#emailId").focus();
@@ -152,12 +161,12 @@ function chkNull(){
 		<div id = "signUpTitle">
 			회원가입
 		</div>
-	<form action="#" method ="post">
+	<form action="#" method ="post" name = "frm">
 
 		<table style = " text-align : left; margin : 30px auto">
 			<tr>
 				<td style = " width : 120px;">아이디</td>
-				<td ><input type = "text" name = "id" id = "id" class ="inputBox"/> &nbsp; &nbsp;&nbsp; &nbsp; <input type="button" id="chkId" value = "ID중복검사" class="btn btn-primary"style ="height : 32px"/></td>
+				<td ><input type = "text" name = "id" id = "id" class ="inputBox" placeholder="ID중복검사를 눌러주세요" readonly="readonly"/> &nbsp; &nbsp;&nbsp; &nbsp; <input type="button" id="chkId" value = "ID중복검사" class="btn btn-primary"style ="height : 32px"/></td>
 			</tr> 
 			<tr>
 				<td>비밀번호</td>
@@ -218,7 +227,7 @@ function chkNull(){
 		</table>
 		</form>
 		<div>
-			<input type = "button" value = "뒤로가기" class= "btn btn-danger" style = "height : 40px;"/>&nbsp; &nbsp;<input type = "button" value = "가입하기" id ="joinBtn" class = " btn btn-primary" style = "height : 40px"/>
+			<input type = "button" value = "뒤로가기" class= "btn btn-danger" style = "height : 40px;" onclick ="history.back()"/>&nbsp; &nbsp;<input type = "button" value = "가입하기" id ="joinBtn" class = " btn btn-primary" style = "height : 40px"/>
 		</div>
 	</div>
 	
