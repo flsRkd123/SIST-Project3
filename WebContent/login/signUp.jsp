@@ -49,6 +49,11 @@ $(function(){
 	});
 	
 	
+	$("#chkId").click(function () {
+		//window.open("id_dup.do?cmd=D001", "popup", "width=500, height=302, top="
+		window.open("http://localhost/sistProject3/login/id_dup.jsp", "popup", "width=500, height=302, top="
+			+ (window.screenTop + 300) + ",left=" + (window.screenLeft + 700))
+	})
 });//Ready
 
 function chkPass(){
@@ -152,7 +157,7 @@ function chkNull(){
 		<table style = " text-align : left; margin : 30px auto">
 			<tr>
 				<td style = " width : 120px;">아이디</td>
-				<td ><input type = "text" name = "id" id = "id" class ="inputBox"/> &nbsp; &nbsp;&nbsp; &nbsp; <input type="button" value = "ID중복검사" class="btn btn-primary"style ="height : 32px"/></td>
+				<td ><input type = "text" name = "id" id = "id" class ="inputBox"/> &nbsp; &nbsp;&nbsp; &nbsp; <input type="button" id="chkId" value = "ID중복검사" class="btn btn-primary"style ="height : 32px"/></td>
 			</tr> 
 			<tr>
 				<td>비밀번호</td>
