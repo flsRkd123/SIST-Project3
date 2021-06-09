@@ -79,15 +79,15 @@ function nullChk(){
        <%@ include file ="../header.jsp" %>
 
 <div class="container">
-    <div id = "login" class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+    <div id = "login" class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2" >
         <div class="panel panel-success">
-            <div class="panel-heading" style ="text-align : center">
-                <div class="panel-title" >환영합니다!</div>
+            <div class="panel-heading" >
+                <div class="panel-title" style = "text-align : center">환영합니다!</div>
             </div>
-            <div class="panel-body">
+            <div class="panel-body" >
                 <form  action ="#" id="login-form" method = "post">
                     <div>
-                        <input type="text" class="form-control" id = "id" name="id" placeholder="UserID" autofocus="autofocus">
+                        <input type="text" class="form-control" id = "id" name="id" placeholder="UserID" autofocus="autofocus"  >
                     </div>
                     <div>
                         <input type="password" id ="pass" class="form-control" name="pass" placeholder="Password">
@@ -97,7 +97,7 @@ function nullChk(){
 					</div>
                 </form>
 					<div style="width : 100%;text-align:center;">
-						<a href="#">아이디/비밀번호 찾기</a> | <a href="#">회원가입</a>
+						<a href="#"  style ="color : black; text-decoration: none">아이디/비밀번호 찾기</a> | <a href="http://localhost/sistProject3/login/terms.jsp"  style ="color : black; text-decoration: none">회원가입</a>
 					</div>
             </div>
         </div>
