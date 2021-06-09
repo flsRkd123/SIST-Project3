@@ -21,6 +21,13 @@ body {
    padding:0;
    height:100%;
 } 
+#wrap {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+      }
  .container {
    min-height:82%;
    position:relative;
@@ -38,6 +45,7 @@ div{border : 1px soild #333}
 </script>
 </head>
 <body>
+<div id = "wrap">
    <%@ include file ="../header.jsp" %>
 
 <div class = "container">	
@@ -53,6 +61,6 @@ div{border : 1px soild #333}
 	</div>
 </div>
    <%@ include file ="../footer.jsp" %>
-
+</div>
 </body>
 </html>
