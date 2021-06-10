@@ -30,7 +30,6 @@ body {
         margin : auto 0px;
       }
  .container {
-   min-height:82%;
    position:relative;
    text-align : center;
    
@@ -52,7 +51,38 @@ table {
 }
  </style>
 <script type="text/javascript">
-
+	$(function(){
+		$("#id_find_btn").click(function(){
+			if($("#id_find_name").val() == ""){
+				alert("이름을 입력해주세요");
+				$("#id_find_name").focus();
+				return;
+			}
+			if($("#id_find_email").val() == ""){
+				alert("이메일을 입력해주세요");
+				$("#id_find_email").focus();
+				return;
+			}
+		});//click
+		
+		$("#pass_find_btn").click(function(){
+			if($("#pass_find_name").val() == ""){
+				alert("이름을 입력해주세요");
+				$("#pass_find_name").focus();
+				return;
+			}
+			if($("#pass_find_email").val() == ""){
+				alert("이메일을 입력해주세요");
+				$("#pass_find_email").focus();
+				return;
+			}
+			if($("#pass_find_id").val() == ""){
+				alert("이메일을 입력해주세요");
+				$("#pass_find_id").focus();
+				return;
+			}
+		});//click
+	});//ready
 
 </script>
 </head>
@@ -76,12 +106,12 @@ table {
 				<tbody>
 					<tr>
 						<td style = "text-align : right; padding-right : 100px; "> 이름 </td>
-						<td style="text-align:left; width : 80%"> <input type="text" class="inputBtn" > </td>
+						<td style="text-align:left; width : 80%"> <input type="text" id = "id_find_name" name= "id_find_name" class="inputBtn" > </td>
 					</tr>
 					<tr>
 						<td style = "text-align : right; padding-right : 100px"> 이메일 </td>
-						<td style =" text-align:left"> <input type="text" class="inputBtn" style ="width: 120px;"> @  	
-						<select name = "email" id = "domain" class ="inputBox" style = "width : 120px;">
+						<td style =" text-align:left"> <input type="text" id = "id_find_email" name = "id_find_email" class="inputBtn" style ="width: 120px;"> @  	
+						<select name = "email" id = "id_find_domain" class ="inputBox" style = "width : 120px;">
 							<option value = "naver.com">naver.com</option>		
 							<option value = "daum.net">daum.net</option>
 							<option value = "google.com">google.com</option>		
@@ -108,12 +138,13 @@ table {
 				<tbody>
 					<tr>
 						<td style = "text-align : right; padding-right : 100px"> 이름 </td>
-						<td style="text-align:left; width : 80%"> <input type="text" class="inputBtn" > </td>
+						<td style="text-align:left; width : 80%"> <input type="text" id = "pass_find_name" name = "pass_find_name" class="inputBtn" > </td>
+						
 					</tr>
 					<tr>
 						<td style = "text-align : right; padding-right : 100px"> 이메일 </td>
-						<td style =" text-align:left"> <input type="text" class="inputBtn" style ="width: 120px;"> @  	
-						<select name = "email" id = "domain" class ="inputBox" style = "width : 120px;">
+						<td style =" text-align:left"> <input type="text" id="pass_find_email" name = "pass_find_email" class="inputBtn" style ="width: 120px;"> @  	
+						<select name = "email" id = "pass_find_domain" class ="inputBox" style = "width : 120px;">
 							<option value = "naver.com">naver.com</option>		
 							<option value = "daum.net">daum.net</option>
 							<option value = "google.com">google.com</option>		
@@ -123,7 +154,7 @@ table {
 					</tr>
 					<tr>
 						<td style = "text-align : right; padding-right : 100px"> 아이디 </td>
-						<td style="text-align:left; width : 80%"> <input type="text" class="inputBtn" > </td>
+						<td style="text-align:left; width : 80%"> <input type="text" id = "pass_find_id"  name = "pass_find_id" class="inputBtn" > </td>
 					</tr>
 					<tr>
 						<td colspan = "2"> <input type="button" id = "pass_find_btn" value = "비밀번호 찾기" class = "btn btn-primary"> </td>
