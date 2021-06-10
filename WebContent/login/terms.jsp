@@ -21,12 +21,19 @@ body {
    height:100%;
 } 
  .container {
-   min-height:80%;
+   min-height:100%;
    position:relative;
    text-align : center;
    
   /*padding-bottom:100px;/* footer height */
 }
+#wrap {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+      }
 
 #termsTitle{font-size: 30px; font-weight: bold; margin-top : 50px}
  </style>
@@ -51,6 +58,7 @@ body {
 </script>
 </head>
 <body>
+<div id = "wrap">
 	<%@include file ="../header.jsp" %>
 	<div class ="container">
 		<div id = "termsTitle">
@@ -211,7 +219,7 @@ body {
 			<strong> ■ 개인정보 수집 및 이용에 대한 안내</strong> 
 		</div>
 		<textarea style = "width : 600px; height : 200px; resize: none; ">
-		가. 개인정보의 수집 및 이용 목적
+가. 개인정보의 수집 및 이용 목적
 ① 국가공간정보포털은 다음의 목적을 위하여 개인정보를 처리합니다. 처리하고 있는 개인정보는 다음의 목적 이외의 용도로는 이용되지 않으며, 이용 목적이 변경되는 경우에는 개인정보 보호법 제18조에 따라 별도의 동의를 받는 등 필요한 조치를 이행할 예정입니다.
 1. 국가공간정보포털 서비스 제공을 위한 회원관리
 1) 공간정보 다운로드, 오픈API 신청 및 활용 등 포털 서비스 제공과 서비스 부정이용 방지를 목적으로 개인정보를
@@ -240,6 +248,7 @@ body {
 		</div>
 	</div>
 	<%@include file ="../footer.jsp" %>
+	</div>
   <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->

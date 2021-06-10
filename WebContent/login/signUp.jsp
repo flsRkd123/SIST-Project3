@@ -22,6 +22,13 @@ body {
    padding:0;
    height:100%;
 } 
+#wrap {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+      }
  .container {
    min-height:100%;
    position:relative;
@@ -156,6 +163,7 @@ function chkNull(){
 </script>
 </head>
 <body>
+<div id = "wrap">
 <%@include file ="../header.jsp" %>
 	<div class ="container" style = "margin : 30px auto; background-color : #f8f9fa ">
 		<div id = "signUpTitle">
@@ -234,7 +242,7 @@ function chkNull(){
 <%@include file ="../footer.jsp" %>
 	
 
-	
+	</div>
 	
 <!-- iOS에서는 position:fixed 버그가 있음, 적용하는 사이트에 맞게 position:absolute 등을 이용하여 top,left값 조정 필요 -->
 <div id="layer" style="display:none;position:fixed;overflow:hidden;z-index:1;-webkit-overflow-scrolling:touch;">
