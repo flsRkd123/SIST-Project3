@@ -30,7 +30,6 @@ body {
         justify-content: space-between;
       }
  .container {
-   min-height:100%;
    position:relative;
    text-align : center;
    

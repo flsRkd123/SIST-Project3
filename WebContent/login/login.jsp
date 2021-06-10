@@ -44,15 +44,13 @@ body {
     #login-form > div {
         margin: 15px 0;
     }
-  
+
  .container {
-  display: flex;
-   min-height:62%;
    position:relative;
    justify-content: space-between;
    
   /*padding-bottom:100px;/* footer height */
-}
+} 
 
 
 
@@ -115,7 +113,7 @@ function nullChk(){
 					</div>
                 </form>
 					<div style="width : 100%;text-align:center;">
-						<a href="#"  style ="color : black; text-decoration: none">아이디/비밀번호 찾기</a> | <a href="http://localhost/sistProject3/login/terms.jsp"  style ="color : black; text-decoration: none">회원가입</a>
+						<a href="http://localhost/sistProject3/login/id_pass_find.jsp"  style ="color : black; text-decoration: none">아이디/비밀번호 찾기</a> | <a href="http://localhost/sistProject3/login/terms.jsp"  style ="color : black; text-decoration: none">회원가입</a>
 					</div>
             </div>
         </div>
