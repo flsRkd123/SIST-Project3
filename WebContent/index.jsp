@@ -15,9 +15,9 @@
         <!-- Core theme CSS (includes Bootstrap)-->
        
     </head>
-    <!-- 무한스크롤 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/latest/js/bootstrap.min.js"></script>
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet">
     
     <body>
         <!-- Navigation-->
@@ -33,9 +33,24 @@
         </header>
         <!-- Section-->
         <section>
+        <div>
+        	<select>
+        		<option>---거래 상태---</option>
+        		<option>팝니다</option>
+        		<option>삽니다</option>
+        	</select>
+        	<select>
+        		<option>---거래 지역---</option>
+        		<option>도봉구</option>
+        		<option>동대문구</option>
+        		<option>구로구</option>
+        	</select>
+        	
+        	<span><input type="text" style="width: 150px"></span><span><button>검색</button></span>
+        </div>
         
             <div class="container px-4 px-lg-5 mt-5">
-                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center" id="test">
                     <article>
                     <a href="product_detail.jsp">
                     <div class="col mb-5">
@@ -247,6 +262,7 @@
         <!-- Core theme JS-->
         <script src="http://localhost/sistProject3/common/js/scripts.js"></script>
     </body>
+    
     <script type="text/javascript">
 	  //Javascript
 	    var count = 0;
@@ -257,9 +273,27 @@
 	        if((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
 	        	//실행할 로직 (콘텐츠 추가)
 	            count++;
-	            var addContent = '<div class="col mb-5"><div class="card h-100">칼칼칼</div></div>';
+	            var addContent = "<div class='col mb-5'> <div class='card h-100'> Product image <img class='card-img-top' src='https://dummyimage.com/450x300/dee2e6/6c757d.jpg' alt='…' /> Product details"+
+                "<div class='card-body p-4'>"+
+                    "<div class='text-center'>"+
+                        "Product name"+
+                        "<h5 class='fw-bolder'>Popular Item</h5>"+
+                        "Product reviews"+
+                        "<div class='d-flex justify-content-center small text-warning mb-2'>"+
+                            
+                        "</div>"+
+                        "Product price"+
+                        "$40.00"+
+                    "</div>"+
+                "</div>"+
+                "Product actions"+
+                "<div class='card-footer p-4 pt-0 border-top-0 bg-transparent'>"+
+                    "<div class='text-center'><a class='btn btn-outline-dark mt-auto' href='#'>Add to cart</a></div>"+
+                "</div>"+
+            "</div>"+
+        "</div>";
 	            //article에 추가되는 콘텐츠를 append
-	            $('section').append(addContent);
+	            $('#test').append(addContent).append(addContent).append(addContent).append(addContent);
 	        }
 	        
 	    };
