@@ -92,6 +92,10 @@ html, body {
 	width:200px;
 	background-color: #ECECED;
 }
+
+a{
+	text-decoration: none;
+}
 </style>
 <script type="text/javascript">
 
@@ -100,7 +104,7 @@ html, body {
 </head>
 <body>
 <div id="wrap">
- <%@ include file ="admin_header.jsp" %>
+ <%@ include file ="ad_header.jsp" %>
 <div class="container">
 
 	<div class="admin-wrap">
@@ -108,9 +112,9 @@ html, body {
 		<div class="admin-menu">
 			<table id="table">
 				<tr>
-					<td>지역관리</td>
-					<td>상품관리</td>
-					<td>회원관리</td>
+					<td><a href="http://localhost/sistProject3/admin/ad_location.jsp" style="text-decoration: none; color:black;">지역관리</a></td>
+					<td><a href="http://localhost/sistProject3/admin/ad_product.jsp" style="text-decoration: none; color:black;">상품관리</a></td>
+					<td><a href="http://localhost/sistProject3/admin/ad_member.jsp" style="text-decoration: none; color:black;">회원관리</a></td>
 				</tr>
 			</table>
 		</div>
@@ -137,7 +141,7 @@ html, body {
 	</div>
 
 </div>
-<%@ include file = "admin_footer.jsp" %>
+<%@ include file = "ad_footer.jsp" %>
 </div>
 </body>
 </html>

@@ -11,6 +11,7 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/latest/js/bootstrap.min.js"></script>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css" rel="stylesheet">
+
 <style>
 html, body {
 	margin: 0;
@@ -100,15 +101,21 @@ html, body {
 	width:100px;
 	background-color: #ECECED;
 }
+
 </style>
 <script type="text/javascript">
 
+$(function(){
+	$("#product-detail-btn").click(function(){
+		location.href="http://localhost/sistProject3/admin/ad_product_detail.jsp";
+	});
+});
 
 </script>
 </head>
 <body>
 <div id="wrap">
- <%@ include file ="admin_header.jsp" %>
+ <%@ include file ="ad_header.jsp" %>
 <div class="container">
 
 	<div class="admin-wrap">
@@ -116,9 +123,9 @@ html, body {
 		<div class="admin-menu">
 			<table id="table">
 				<tr>
-					<td>지역관리</td>
-					<td>상품관리</td>
-					<td>회원관리</td>
+					<td><a href="http://localhost/sistProject3/admin/ad_location.jsp" style="text-decoration: none; color:black;">지역관리</a></td>
+					<td><a href="http://localhost/sistProject3/admin/ad_product.jsp" style="text-decoration: none; color:black;">상품관리</a></td>
+					<td><a href="http://localhost/sistProject3/admin/ad_member.jsp" style="text-decoration: none; color:black;">회원관리</a></td>
 				</tr>
 			</table>
 		</div>
@@ -141,7 +148,7 @@ html, body {
 					<td ></td>
 					<td ></td>
 					<td ></td>
-					<td ><input type="button" value="상세보기"/></td>
+					<td ><input type="button" value="상세보기" id="product-detail-btn"/></td>
 				</tr>	
 			</table>
 		</div>
@@ -149,7 +156,7 @@ html, body {
 	</div>
 
 </div>
-<%@ include file = "admin_footer.jsp" %>
+<%@ include file = "ad_footer.jsp" %>
 </div>
 </body>
 </html>

@@ -151,6 +151,10 @@ html, body {
 	/* text-align: center; */
 	/* border: 1px solid #333;	 */
 }
+
+a{
+	text-decoration: none;
+}
 </style>
 <script>
 
@@ -169,7 +173,7 @@ $(function() {
 </head>
 <body>
 <div id="wrap">
- <%@ include file ="admin_header.jsp" %>
+ <%@ include file ="ad_header.jsp" %>
 <div class="container">
 <!-- 모달창 -->
 <div id="modal">
@@ -248,9 +252,9 @@ $(function() {
 		<div class="admin-menu">
 			<table id="table">
 				<tr>
-					<td>지역관리</td>
-					<td>상품관리</td>
-					<td>회원관리</td>
+					<td><a href="http://localhost/sistProject3/admin/ad_location.jsp" style="text-decoration: none; color:black;">지역관리</a></td>
+					<td><a href="http://localhost/sistProject3/admin/ad_product.jsp" style="text-decoration: none; color:black;">상품관리</a></td>
+					<td><a href="http://localhost/sistProject3/admin/ad_member.jsp" style="text-decoration: none; color:black;">회원관리</a></td>
 				</tr>
 			</table>
 		</div>
@@ -279,7 +283,7 @@ $(function() {
 	</div>
 
 </div>
-<%@ include file = "admin_footer.jsp" %>
+<%@ include file = "ad_footer.jsp" %>
 </div>
 </body>
 </html>
