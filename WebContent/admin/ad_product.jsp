@@ -66,9 +66,10 @@ html, body {
 	font-weight: 1000;
 }
 
-#admin-product-table-div {
+.admin-product-table-div {
 	width: 100%;
 	height:500px;
+	overflow-y: scroll;
 }
 
 #product-table{
@@ -143,6 +144,7 @@ $(function(){
 					<td id="product-regdate">등록일자</td>
 					<td id="product-detail">상세보기</td>
 				</tr>
+				<%for(int i=0;i<5;i++){ %>
 				<tr>
 					<td></td>
 					<td ></td>
@@ -150,6 +152,7 @@ $(function(){
 					<td ></td>
 					<td ><input type="button" value="상세보기" id="product-detail-btn"/></td>
 				</tr>	
+				<%} %>
 			</table>
 		</div>
 		

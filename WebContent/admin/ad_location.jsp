@@ -65,9 +65,10 @@ html, body {
 	font-weight: 1000;
 }
 
-#admin-location-table-div {
+.admin-location-table-div {
 	width: 100%;
 	height:500px;
+	overflow-y: scroll;
 }
 
 #location-table{
@@ -130,11 +131,15 @@ a{
 					<td id="location-main">관리지역</td>
 					<td id="location-check">On/Off</td>
 				</tr>
+				
+				<%for(int i=0;i<10;i++){ %>
 				<tr>
 					<td></td>
-					<td ></td>
-					<td ><input type="checkbox"/></td>
-				</tr>	
+					<td></td>
+					<td><input type="checkbox"/></td>
+				</tr>
+				<%} %>
+				
 			</table>
 		</div>
 		

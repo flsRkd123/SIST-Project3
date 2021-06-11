@@ -27,30 +27,35 @@ html, body {
 }
 
 .admin-wrap {
+	position:relative;
 	border: 1px solid #333;
-	width: 70%;
+	width: 905px;
 	height: 1100px;
 	margin: 50px auto;
 }
 
 #admin-detail-picture1 {
-	border: 1px solid #333;
-	width: 450px;
+	position:absolute;
+	border-bottom: 1px solid #333;
+	border-right: 1px solid #333;
+	width: 456px;
 	height: 450px;
 	text-align: center;
-	float: left;
+	
 }
 
 #admin-detail-picture2 {
-	border: 1px solid #333;
-	width: 450px;
+	position:absolute;
+	/* border: 1px solid #333; */
+	width: 448px;
 	height: 450px;
-	/* text-align: center; */
-	float: right;
+	left:456px;	
 }
 
 #admin-detail-comment {
-	border: 1px solid #333;
+	position:absolute;
+	/* border: 1px solid #333; */
+	width:905px;
 	height: 150px;
 	margin-top: 450px;
 	text-align: center;
@@ -58,14 +63,21 @@ html, body {
 }
 
 #admin-detail-comment-table {
-	border: 1px solid #333;
+	position:absolute;
+	border-top: 1px solid #333;
+	width:903px;
 	height: 400px;
 	text-align: center;
+	margin-top: 600px;
+	overflow-y: scroll;
 }
 
 #admin-detail-delback {
-	border: 1px solid #333;
+	position:absolute;
+	border-top: 1px solid #333;
+	width:904px;
 	height: 100px;
+	margin-top: 1000px;
 	text-align: center;
 	padding-top: 15px;
 }
@@ -82,6 +94,10 @@ html, body {
 
 #comment-table {
 	width: 100%;
+}
+
+#comment-table th{
+	background-color: #ECECED;
 }
 
 #comment-table-id {
@@ -111,7 +127,7 @@ html, body {
 
 .img {
 	position: absolute;
-	width: 450px;
+	width: 455px;
 	height: 415px;
 	-webkit-transition: opacity 1s ease-in-out;
 	-moz-transition: opacity 1s ease-in-out;
@@ -198,15 +214,15 @@ $(function(){
 		</div>
 		
 		<div id="admin-detail-picture2">
-			<div style="height:100px; border:1px solid #333; padding-top:30px">
-				<div style="float:left; width:250px; height:50px; font-size: 25px; border: 1px solid #333"><label>상품명</label></div>
+			<div style="height:100px; border-bottom:1px solid #333; padding-top:30px">
+				<div style="float:left; width:250px; height:50px; font-size: 25px; padding-left:15px; border: 1px solid #333"><label>상품명</label></div>
 				<div style="float:right; width:180px; height:50px; border: 1px solid #333; ">삽/팝니다</div>			
 			</div>
 			
-			<div style="height:50px;text-align:center ;border: 1px solid #333;">
-				<div style="float:left; font-size: 20px; padding-top:9px; padding-left:15px"><label>가격</label></div>
+			<div style="height:50px;text-align:center ;border-bottom: 1px solid #333;">
+				<div style="float:left; font-size: 20px; padding-top:9px; padding-left:15px"><label>가격:</label></div>
 			</div>
-			<div style="height:300px;border: 1px solid #333; padding:15px;">
+			<div style="height:300px;border-bottom: 1px solid #333; padding:15px;">
 				<div style="height:50px; font-size: 20px;"><label>아이디:</label> sist123</div>
 				<div style="height:50px; font-size: 20px;"><label>등록일:</label> 2021-06-11</div>
 				<div style="height:200px; font-size: 20px;"><label>상세내용:</label><br/>
@@ -230,18 +246,14 @@ $(function(){
 					<th id="comment-table-regdate">날짜</th>
 					<th id="comment-table-del">삭제</th>
 				</tr>
+				<%for(int i=0;i<10;i++){ %>
 				<tr>
 					<td>1</td>
 					<td>2</td>
 					<td>3</td>
 					<td><input type="button" value="삭제"/></td>
 				</tr>
-				<tr>
-					<td>1</td>
-					<td>2</td>
-					<td>3</td>
-					<td><input type="button" value="삭제"/></td>
-				</tr>
+				<%} %>
 			</table>
 		</div>
 		
