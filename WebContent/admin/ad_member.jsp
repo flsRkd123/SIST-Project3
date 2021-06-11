@@ -66,9 +66,10 @@ html, body {
 	font-weight: 1000;
 }
 
-#admin-member-table-div {
+.admin-member-table-div {
 	width: 100%;
 	height:500px;
+	overflow-y: scroll;
 }
 
 #member-table{
@@ -152,9 +153,6 @@ html, body {
 	/* border: 1px solid #333;	 */
 }
 
-a{
-	text-decoration: none;
-}
 </style>
 <script>
 
@@ -187,7 +185,7 @@ $(function() {
 			</tr>
 			<tr>
 				<th style="width:150px; height:50px;">아이디</th>
-				<td style="height:50px;"><input type="text" style="width:400px; height:50px; background-color:#ECECED;"/></td>		
+				<td style="height:50px;"><input type="text" readonly="readonly" style="width:400px; height:50px; background-color:#ECECED;"/></td>		
 			</tr>
 			<tr>
 				<th style="width:150px; height:50px;">휴대폰번호</th>
@@ -232,7 +230,7 @@ $(function() {
 			</tr>
 			<tr>
 				<th style="width:150px; height:50px;">가입일자</th>
-				<td style="height:50px;"><input type="text" style="width:400px; height:50px; background-color:#ECECED;"/></td>		
+				<td style="height:50px;"><input type="text" readonly="readonly" style="width:400px; height:50px; background-color:#ECECED;"/></td>		
 			</tr>
 			<tr>
 				<td colspan="2" style="height:100px; text-align: center;">
@@ -271,12 +269,14 @@ $(function() {
 					<td id="member-addr">주소</td>
 					<td id="member-detail">상세보기</td>
 				</tr>
+				<%for(int i=0;i<5;i++){ %>
 				<tr>
 					<td></td>
 					<td></td>
 					<td></td>
 					<td><input type="button" value="상세보기" id="modal-open-btn"/></td>
 				</tr>	
+				<%} %>
 			</table>
 		</div>
 		
